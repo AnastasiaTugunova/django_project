@@ -32,5 +32,4 @@ def workdir_view(request):
 
     workdir = listdir(path='.')
     workdir_text = f"Текущие директории: {workdir}"
-    print(workdir_text)
     return HttpResponse(workdir_text)
