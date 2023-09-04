@@ -26,9 +26,7 @@ def recipe_views(request, recipe_name):
 
     recipe = DATA[recipe_name]
     servings = request.GET.get('servings')
-    print(recipe)
-    print(servings)
-    print(recipe_name)
+
     if servings:
         recipe = {item: round(value * int(servings), 2) for item, value in recipe.items()}
     context = {
